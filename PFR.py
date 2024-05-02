@@ -14,5 +14,6 @@ rxn_r = {'zero':      lambda var: var[0][0], #var = [[k]] one dimensional
          'elementar': lambda var: var[0][0]*np.prod(var[1][:]), #var = [[k], [C_i1, C_i2...]] two dimensional
          'custom':    lambda var: var[0][0]*np.prod(np.power(var[1], var[2]))} #var = [[k], [C_i1, C_i2...], [exp_i1, exp_i2...]] three dimensional
 
-#rxn_r = rxn_r['custom']( [[0.1], [1, 3], [2, 2]] ) # Reaction kinetics constant in mol/(L.h)
+rxn_r = rxn_r['custom']( [[0.1], [1, 3], [2, 2]] ) # Reaction kinetics constant in mol/(L.h)
 
+print(rxn_r)
